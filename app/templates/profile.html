@@ -1,0 +1,40 @@
+{# <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}" /> #}
+
+{% extends "base.html" %}
+
+
+{% block main %}
+<div class="profile-container">
+
+    <div class="profile-body">
+        <div class = "profile-header">
+            <img src="{{ url_for('static', filename='cat.jpg') }}" />
+            <h1>Yohance Cockett</h1>
+            <h6>@Flashface66</h6>
+            <h6>Kingston, Jamaica</h6>
+            <h6>Joined {{ date_joined }}</h6>
+        </div>
+        <div class = "profile-main">
+            <p>I am a young man who does indeed enjoy the proceess of web devolopment and design. Hit me up if you need some done 😁.</p>
+            <table style="margin:auto; width:20%;">
+                <tr>
+                    <td>41</td>
+                    <td>630</td>
+                    <td>1013</td>
+                </tr>
+                <tr>
+                    <td>Posts</td>
+                    <td>Following</td>
+                    <td>Followers</td>
+                </tr>
+            </table>
+            <button type="button" class="confettiButton">Follow</button>
+            <div id="confettiContainer"></div>
+            <audio id="sound">
+                <source src="{{ url_for('static', filename='Yippee.mp3') }}"  type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+</div>
+{% endblock %}
